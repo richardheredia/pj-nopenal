@@ -5,7 +5,7 @@ body {
 .site-header {
   background-color: #ffffff;
   border-bottom: 1px solid #e8e8e8;
-  position: sticky;
+ 
   top: 0;
   z-index: 1030;
 }
@@ -37,21 +37,20 @@ body {
 .header-wrapper {
   display: grid;
   grid-template-columns: 112px minmax(0, 1fr) 112px;
-  align-items: center;
+ 
   gap: 16px;
 }
 
 .header-logo-block {
   display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 
 .header-logo {
   display: block;
   width: 100%;
-  max-width: 92px;
-  max-height: 74px;
+  
+  max-height: 120px;
   object-fit: contain;
 }
 
@@ -174,13 +173,7 @@ body {
     display: none;
   }
 
-  .header-wrapper {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "logo-left logo-right"
-      "title title";
-    gap: 10px 14px;
-  }
+
 
   .header-logo-left {
     grid-area: logo-left;
@@ -194,10 +187,7 @@ body {
     grid-area: title;
   }
 
-  .header-logo {
-    max-width: 62px;
-    max-height: 50px;
-  }
+
 
   .header-kicker {
     font-size: 0.76rem;
