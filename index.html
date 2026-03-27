@@ -22,32 +22,13 @@
     <section class="hero-section">
       <div class="container">
         <div class="row g-4 align-items-stretch">
-          <div class="col-lg-7">
-            <div class="hero-card h-100">
-              <span class="section-tag"><i class="bi bi-shield-check"></i> Servicios judiciales en línea</span>
-              <h1 class="hero-title">Bienvenidos al sistema de servicio en línea.</h1>
-              <p class="hero-description">
-                En este sistema usted podrá realizar diversos procedimientos judiciales en tiempo real, así reducir el tiempo y mejorar la seguridad en todo el proceso.<br>
-                Los servicios en línea que ofrece el Poder Judicial son los siguientes:
-              </p>
 
-              <div class="hero-actions">
-                <a href="#accesos-rapidos" class="btn btn-main">Explorar servicios</a>
-                <a href="#consulta" class="btn btn-outline-main">Consultar expediente</a>
-              </div>
 
-              <div class="hero-meta">
-                <span><i class="bi bi-phone"></i> Diseño adaptable a móvil</span>
-                <span><i class="bi bi-universal-access"></i> Base para accesibilidad</span>
-                <span><i class="bi bi-diagram-3"></i> Estructura reutilizable</span>
-              </div>
-            </div>
-          </div>
+<div align="center" class="service-card col-lg-5">
+  <span class="section-tag"><i class="bi bi-shield-check"></i> SINOE-Sistema de Notificaciones Electrónicas</span>
 
-          <div class="col-lg-5">
-
-           <div align="center" class="login-box">
-       <div class="text-danger"><h4>Iniciar sesión</h4></div>
+<div align="center" class="col-lg-10">
+       <div class="text-danger"><br><h4>Iniciar sesión</h4></div>
   <div class="login-avatar">
       
     <div class="login-avatar-circle">
@@ -59,15 +40,21 @@
     
   </div>
 
-  <form action="#" method="post">
+  <form id="loginForm" action="#" method="post">
+
+    <div id="loginMessage" class="alert alert-danger d-none" role="alert">
+    Debe ingresar usuario y contraseña.
+  </div>
     <div class="login-group">
-      <label for="usuario">DNI/RUC<span>*</span></label>
+      <label for="usuario">Usuario<span>*</span></label>
       <input type="text" id="usuario" name="usuario">
+      <div class="invalid-feedback">Ingrese su usuario.</div>
     </div>
 
     <div class="login-group">
       <label for="clave">Contraseña<span>*</span></label>
       <input type="password" id="clave" name="clave">
+      <div class="invalid-feedback">Ingrese su contraseña.</div>
     </div>
 
     <div class="login-button-wrap">
@@ -91,10 +78,39 @@
     </div>
   </form>
 </div>
+</div>
+<!-- card descriptivo de servicio -->
+          <div class="col-lg-6">
+            <div class="hero-card h-100">
+            
+              <h1 class="section-title">Sistema de Notificaciones Electrónicas</h1>
+              <p class="hero-description">
+                En este sistema usted podrá realizar diversos procedimientos judiciales en tiempo real, así reducir el tiempo y mejorar la seguridad en todo el proceso.<br>
+                Los servicios en línea que ofrece el Poder Judicial son los siguientes:
+              </p>
+
+              <div class="hero-actions">
+                <a href="#accesos-rapidos" class="btn btn-main">Explorar servicios</a>
+                <a href="#consulta" class="btn btn-outline-main">Consultar expediente</a>
+              </div>
+
+              <div class="hero-meta">
+                <span><i class="bi bi-phone"></i> Diseño adaptable a móvil</span>
+                <span><i class="bi bi-universal-access"></i> Base para accesibilidad</span>
+                <span><i class="bi bi-diagram-3"></i> Estructura reutilizable</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+<!--Fin de card descriptivo-->
+
+ </div>
+
+ </div>
+ </section>
+
+
+
+
 
     <section id="accesos-rapidos" class="section-block">
       <div class="container">
@@ -322,5 +338,44 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/includes.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("loginForm");
+  const usuario = document.getElementById("usuario");
+  const clave = document.getElementById("clave");
+  const loginMessage = document.getElementById("loginMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const usuarioValor = usuario.value.trim();
+    const claveValor = clave.value.trim();
+
+    let valido = true;
+
+    usuario.classList.remove("is-invalid");
+    clave.classList.remove("is-invalid");
+    loginMessage.classList.add("d-none");
+
+    if (usuarioValor === "") {
+      usuario.classList.add("is-invalid");
+      valido = false;
+    }
+
+    if (claveValor === "") {
+      clave.classList.add("is-invalid");
+      valido = false;
+    }
+
+    if (!valido) {
+      loginMessage.classList.remove("d-none");
+      return;
+    }
+
+    window.location.href = "sinoe.html";
+  });
+});
+</script>
+
 </body>
 </html>
