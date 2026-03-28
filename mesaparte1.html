@@ -39,7 +39,7 @@
   <div class="row g-3">
 
     <div class="col-12">
-      <div class="text-start"><label for="distrito_judicial" class="form-label fw-semibold">Distrito judicial</label></div>
+      <div class="text-start"><label for="distrito_judicial" class="form-label fw-semibold">Órgano</label></div>
       <select id="distrito_judicial" name="distrito_judicial" class="form-select">
         <option value="">Seleccione</option>
         <option value="Amazonas">Amazonas</option>
@@ -72,16 +72,6 @@
       <div class="invalid-feedback">Seleccione el distrito judicial.</div>
     </div>
 
-    <div class="col-12">
-      <div class="text-start"><label for="instancia" class="form-label fw-semibold">Instancia</label></div>
-      <select id="instancia" name="instancia" class="form-select">
-        <option value="">Seleccione</option>
-        <option value="Juzgado de paz letrado">Juzgado de paz letrado</option>
-        <option value="Juzgado mixto">Juzgado mixto</option>
-        <option value="Sala superior">Sala superior</option>
-      </select>
-      <div class="invalid-feedback">Seleccione la instancia.</div>
-    </div>
 
     <div class="col-12">
       <div class="text-start"><label for="especialidad" class="form-label fw-semibold">Especialidad</label></div>
@@ -96,22 +86,7 @@
       <div class="invalid-feedback">Seleccione la especialidad.</div>
     </div>
 
-    <div class="col-12">
-      <div class="text-start"><label for="sede" class="form-label fw-semibold">Sede</label></div>
-      <select id="sede" name="sede" class="form-select">
-        <option value="">Seleccione</option>
-         <option value="Arenales">Arenales Principal</option>
-      </select>
-    </div>
-
-    <div class="col-12">
-      <div class="text-start"><label for="sub_especialidad" class="form-label fw-semibold">Sub especialidad</label></div>
-      <select id="sub_especialidad" name="sub_especialidad" class="form-select">
-        <option value="">Seleccione</option>
-         <option value="Laboral">Laboral</option>
-         <option value="Laboral">Familia civil</option>
-      </select>
-    </div>
+    
 
     <div class="col-10 text-end mt-2"><br>
       <button type="button" class="btn btn-danger px-4 btn-lg" onclick="irSegunSeleccion()">
@@ -188,22 +163,19 @@
 <script>
 
   function irSegunSeleccion() {
-    const instancia = document.getElementById("instancia");
-    const distrito = document.getElementById("distrito_judicial");
+   
+     const distrito = document.getElementById("distrito_judicial");
     const especialidad = document.getElementById("especialidad");
     const mensaje = document.getElementById("mensajeValidacion");
 
     let valido = true;
 
-    instancia.classList.remove("is-invalid");
+   
     distrito.classList.remove("is-invalid");
     especialidad.classList.remove("is-invalid");
     mensaje.classList.add("d-none");
 
-    if (instancia.value === "") {
-      instancia.classList.add("is-invalid");
-      valido = false;
-    }
+
 
     if (distrito.value === "") {
       distrito.classList.add("is-invalid");
