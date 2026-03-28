@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datos de órgano jurisdiccional</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/body.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+<style>
+    body{
+      font-family: 'Roboto', sans-serif;
+      background: #f5f5f5;
+      color: #4f4f4f;
+    }
+
+    .expediente-page{
+      padding: 24px 0 40px;
+    }
+
+    .expediente-top-menu{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+
+    .expediente-top-menu .menu-item{
+      color: #666;
+      text-decoration: none;
+      padding-bottom: 8px;
+      border-bottom: 2px solid transparent;
+      transition: all .2s ease;
+    }
+
+    .expediente-top-menu .menu-item:hover{
+      color: #d07d7d;
+    }
+
+    .expediente-top-menu .menu-item.active{
+      color: #d07d7d;
+      border-bottom-color: #d07d7d;
+    }
+
+    .expediente-form-wrapper{
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .section-header{
+      background: #7f7c6d;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 8px 12px;
+      border-radius: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .section-header-btn{
+      width: 100%;
+      border: none;
+      background: #7f7c6d;
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 8px 12px;
+      border-radius: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+
+    .section-body{
+      padding: 18px 0 0;
+    }
+
+    .campo-label{
+      font-size: 13px;
+      font-weight: 500;
+      color: #5b5b5b;
+      margin-bottom: 6px;
+    }
+
+    .campo-label span{
+      color: #d56b7c;
+      margin-left: 2px;
+    }
+
+    .expediente-input{
+      border: 1px solid #444;
+      border-radius: 0;
+      min-height: 38px;
+      font-size: 13px;
+      color: #4f4f4f;
+      box-shadow: none;
+    }
+
+    .expediente-input:focus{
+      border-color: #7f7c6d;
+      box-shadow: none;
+    }
+
+    .expediente-textarea{
+      border: 1px solid #444;
+      border-radius: 0;
+      resize: none;
+      font-size: 13px;
+      box-shadow: none;
+    }
+
+    .expediente-textarea:focus{
+      border-color: #7f7c6d;
+      box-shadow: none;
+    }
+
+    .expediente-check{
+      font-size: 13px;
+      color: #555;
+      margin-top: 9px;
+    }
+
+    .caracteres-restantes{
+      font-size: 12px;
+      color: #555;
+      margin-top: 4px;
+      text-align: right;
+    }
+
+    .btn-atras{
+      background: #b6b6b6;
+      color: #fff;
+      min-width: 92px;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 22px;
+      border-radius: 5px;
+    }
+
+    .btn-atras:hover{
+      background: #a4a4a4;
+      color: #fff;
+    }
+
+    .btn-siguiente{
+      background: #a80f0f;
+      color: #fff;
+      min-width: 112px;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 24px;
+      border-radius: 5px;
+    }
+
+    .btn-siguiente:hover{
+      background: #8f0d0d;
+      color: #fff;
+    }
+
+    @media (max-width: 768px){
+      .expediente-top-menu{
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .section-header,
+      .section-header-btn{
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  
+</head>
+<body>
+
+
+
+  <div id="site-header"></div>
+
+<main class="main-content">
+
+<section class="expediente-page">
+    <div class="container">
+
+      <div class="expediente-top-menu">
+        <a href="#" class="menu-item">DATOS DEL ORGANO JURISDICCIONAL</a>
+        <a href="#" class="menu-item active">DATOS DEL EXPEDIENTE</a>
+        <a href="#" class="menu-item">ARANCELES/DEPOSITOS JUDICIALES</a>
+        <a href="#" class="menu-item">ARCHIVOS ADJUNTOS</a>
+      </div>
+
+      <div class="expediente-form-wrapper">
+
+        <div class="section-box">
+          <div class="section-header">
+            <span>Datos del Expediente</span>
+            <span>▼</span>
+          </div>
+
+          <div class="section-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label campo-label">Motivo de Ingreso:<span>*</span></label>
+                <input type="text" class="form-control expediente-input" value="DENUNCIA">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label campo-label">Proceso:<span>*</span></label>
+                <input type="text" class="form-control expediente-input" value="ABREVIADO">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label campo-label">Materia:<span>*</span></label>
+                <input type="text" class="form-control expediente-input" value="PAGO DE HONORARIOS">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label campo-label">Sub materia:<span>*</span></label>
+                <input type="text" class="form-control expediente-input" value="PAGO DE HONORARIOS">
+              </div>
+
+              <div class="col-12">
+                <label class="form-label campo-label d-block">Cuantitativa<span>*</span></label>
+                <div class="row g-2 align-items-center">
+                  <div class="col-md-3">
+                    <div class="form-check expediente-check">
+                      <input class="form-check-input" type="checkbox" id="indeterminado" checked>
+                      <label class="form-check-label" for="indeterminado">Indeterminado</label>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                    <select class="form-select expediente-input">
+                      <option>Moneda</option>
+                      <option>Soles</option>
+                      <option>Dólares</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="text" class="form-control expediente-input">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label campo-label">Sumilla<span>*</span></label>
+                <textarea class="form-control expediente-textarea" id="sumilla" rows="4" maxlength="255"></textarea>
+                <div class="caracteres-restantes">
+                  Caracteres restantes <span id="contadorSumilla">255</span>.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label campo-label">Sub Especialidad<span>*</span></label>
+                <select class="form-select expediente-input">
+                  <option>(Seleccionar)</option>
+                  <option>Sub especialidad 1</option>
+                  <option>Sub especialidad 2</option>
+                  <option>Sub especialidad 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-box mt-4">
+          <button class="section-header-btn" type="button" data-bs-toggle="collapse" data-bs-target="#datosExpedienteExtra" aria-expanded="false">
+            <span>Datos del Expediente</span>
+            <span>▲</span>
+          </button>
+
+          <div class="collapse" id="datosExpedienteExtra">
+            <div class="section-body">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label campo-label">Campo adicional 1</label>
+                  <input type="text" class="form-control expediente-input">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label campo-label">Campo adicional 2</label>
+                  <input type="text" class="form-control expediente-input">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-box mt-3">
+          <button class="section-header-btn" type="button" data-bs-toggle="collapse" data-bs-target="#partesProcesales" aria-expanded="false">
+            <span>Partes Procesales</span>
+            <span>▲</span>
+          </button>
+
+          <div class="collapse" id="partesProcesales">
+            <div class="section-body">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label campo-label">Demandante</label>
+                  <input type="text" class="form-control expediente-input">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label campo-label">Demandado</label>
+                  <input type="text" class="form-control expediente-input">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center mt-4 pt-2">
+          <button type="button" class="btn btn-atras">Atrás</button>
+          <button type="button" class="btn btn-siguiente">Siguiente</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="section-block">
+      <div class="container">
+        <div class="stats-wrap">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-4">
+              <p class="card-kicker mb-2">Indicadores visuales</p>
+              <h2 class="stats-title mb-2">Bloque listo para métricas institucionales</h2>
+              <p class="section-description mb-0">
+                Este espacio puede mostrar indicadores del portal, uso de servicios y nivel de atención digital.
+              </p>
+            </div>
+            <div class="col-sm-6 col-lg-2">
+              <article class="stats-card text-center">
+                <div class="stat-icon mx-auto"><i class="bi bi-laptop"></i></div>
+                <div class="stats-number">24/7</div>
+                <p class="mb-0">Disponibilidad del portal</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-2">
+              <article class="stats-card text-center">
+                <div class="stat-icon mx-auto"><i class="bi bi-phone"></i></div>
+                <div class="stats-number">100%</div>
+                <p class="mb-0">Adaptable a móvil</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-2">
+              <article class="stats-card text-center">
+                <div class="stat-icon mx-auto"><i class="bi bi-window-stack"></i></div>
+                <div class="stats-number">2</div>
+                <p class="mb-0">Páginas de ejemplo</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-2">
+              <article class="stats-card text-center">
+                <div class="stat-icon mx-auto"><i class="bi bi-diagram-3"></i></div>
+                <div class="stats-number">3</div>
+                <p class="mb-0">Capas CSS separadas</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+  </main>
+
+  <div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/includes1.js"></script>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const sumilla = document.getElementById("sumilla");
+      const contador = document.getElementById("contadorSumilla");
+
+      if (sumilla && contador) {
+        sumilla.addEventListener("input", function () {
+          contador.textContent = 255 - this.value.length;
+        });
+      }
+    });
+  
+</script>
+
+</body>
+</html>
