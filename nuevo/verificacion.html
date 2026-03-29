@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verificación Ciudadana - Demo</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo-box logo-left">
+      <img src="assets/img/logo_reniec.svg" alt="Logo izquierdo">
+    </div>
+
+    <div class="logo-box logo-center">
+      <img src="assets/img/logo_autenticacion_digital.svg" alt="Logo central">
+    </div>
+
+    <div class="logo-box logo-right">
+      <img src="assets/img/logo_gobpe.svg" alt="Logo derecho">
+    </div>
+  </div>
+</header>
+
+  <main class="page-shell">
+    <section class="auth-card auth-card-sm center-text">
+      <span class="section-chip">Paso 2 de 3</span>
+      <h1>Escanea el código desde tu aplicación de prueba</h1>
+      <p class="lead">
+        Usa la app de demostración en tu dispositivo móvil para continuar con la validación.
+      </p>
+
+      <div class="qr-panel">
+        <div class="qr-frame">
+          <div class="qr-grid"></div>
+        </div>
+      </div>
+
+      <div class="status-box">
+        <span class="pulse-dot"></span>
+        <span>Esperando confirmación del dispositivo...</span>
+      </div>
+
+      <div class="steps-box">
+        <h2>Indicaciones</h2>
+        <ol>
+          <li>Abre la aplicación móvil de demostración.</li>
+          <li>Escanea el código QR mostrado en pantalla.</li>
+          <li>Confirma la operación en el dispositivo.</li>
+        </ol>
+      </div>
+
+      <div class="action-row center-row">
+        <a class="btn btn-primary" href="resultado.html?estado=aprobado"> &nbsp;CONTINUAR &nbsp; </a>
+        <a class="btn btn-secondary" href="resultado.html?estado=observado"> &nbsp;&nbsp;CANCELAR &nbsp;&nbsp;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-bar">
+    <div class="container footer-inner">
+      <span>Entorno de demostración visual</span>
+      <span>No utiliza autenticación real</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>

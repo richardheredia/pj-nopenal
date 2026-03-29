@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resultado de Validación - Demo</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-container">
+    <div class="logo-box logo-left">
+      <img src="assets/img/logo_reniec.svg" alt="Logo izquierdo">
+    </div>
+
+    <div class="logo-box logo-center">
+      <img src="assets/img/logo_autenticacion_digital.svg" alt="Logo central">
+    </div>
+
+    <div class="logo-box logo-right">
+      <img src="assets/img/logo_gobpe.svg" alt="Logo derecho">
+    </div>
+  </div>
+</header>
+
+  <main class="page-shell">
+    <section class="auth-card auth-card-sm center-text">
+      <div id="resultIcon" class="result-icon success">✓</div>
+      <span class="section-chip">Paso 3 de 3</span>
+      <h1 id="resultTitle">Validación completada</h1>
+      <p id="resultText" class="lead">
+        La autrnticación se completó correctamente.
+      </p>
+
+      <div class="result-summary">
+        <div class="summary-row">
+          <span>Canal</span>
+          <strong>Aplicación móvil</strong>
+        </div>
+        <div class="summary-row">
+          <span>Modo</span>
+          <strong>Sesión completada</strong>
+        </div>
+        <div class="summary-row">
+          <span>Estado</span>
+          <strong id="resultStatus">Aprobado</strong>
+        </div>
+      </div>
+
+      <div class="action-row center-row">
+        <a class="btn btn-primary" href="sinoe.html">&nbsp; INICIAR &nbsp;</a>
+        <a class="btn btn-secondary" href="verificacion.html">&nbsp;REPETIR&nbsp;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-bar">
+    <div class="container footer-inner">
+      <span>Resultado generado para fines de prototipado</span>
+      <span>Sin conexión a sistemas oficiales</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>

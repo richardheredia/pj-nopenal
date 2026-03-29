@@ -4,185 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SINOE</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/body.css" />
-  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-
-
-
-<!-- Modal de comunicado -->
-<div
-  class="modal fade"
-  id="modalComunicado"
-  tabindex="-1"
-  aria-labelledby="modalComunicadoLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content comunicado-modal">
-      <div class="modal-header comunicado-header">
-        <div>
-          <span class="comunicado-etiqueta">COMUNICADO OFICIAL</span>
-          <h5 class="modal-title mb-0" id="modalComunicadoLabel">
-            Aviso importante para usuarios de servicios en línea
-          </h5>
-        </div>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Cerrar"
-        ></button>
-      </div>
-
-      <div class="modal-body comunicado-body">
-       <div align="center" class="d-flex justify-content-center"> <img src="assets/img/logo-peru.png" class="img-fluid" style="max-height:100px;">
-       </div>
-        <p class="mb-3">
-          Se informa a los usuarios que la plataforma de servicios judiciales
-          no penales se encuentra en etapa de validación funcional del prototipo.
-        </p>
-
-        <div class="alert alert-warning mb-3" role="alert">
-          Antes de usar los servicios, verifique los horarios, canales activos
-          y requisitos del trámite correspondiente.
-        </div>
-
-        
-     
-      </div>
-
-      <div class="modal-footer comunicado-footer">
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-          Cerrar
-        </button>
+  <div class="site-shell">
+    <div id="header-partial" class="partial-root"></div>
     
+<main class="page-main">
+  <section class="page-banner">
+    <div class="section-wrap">
+      <div class="breadcrumbs">Inicio / Servicios electrónicos</div>
+      <h1 class="page-heading">Servicios en línea</h1>
+      <p class="page-lead">Canales para casilla electrónica, mesa de partes electrónica y otros servicios judiciales no penales.</p>
+    </div>
+  </section>
+  <section class="page-section">
+    <div class="section-wrap stack-md">
+
+      <div id="servicios-lista" class="grid-3">
+        <a class="service-card" href="#">
+          <span class="service-icon"><svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M12 3v18M5 7h14M7 12h10M6 17h12' stroke='currentColor' stroke-width='2' stroke-linecap='round'/></svg></span>
+          <h3>Casilla electrónica</h3>
+          <p>Canal para que abogados, fiscales, procuradores y otros usuarios reciban resoluciones y comunicaciones judiciales.</p>
+        </a>
+        <a class="service-card" href="mesa.html">
+          <span class="service-icon"><svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M7 4h7l3 3v13H7z' stroke='currentColor' stroke-width='2'/><path d='M14 4v4h4' stroke='currentColor' stroke-width='2'/><path d='M10 12h6M10 16h6' stroke='currentColor' stroke-width='2' stroke-linecap='round'/></svg></span>
+          <h3>Mesa de partes electrónica</h3>
+          <p>Canal para ingresar demandas y escritos de forma virtual con disponibilidad permanente en varios servicios y especialidades.</p>
+        </a>
+        <a class="service-card" href="#">
+          <span class="service-icon"><svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='4' y='5' width='16' height='14' rx='2' stroke='currentColor' stroke-width='2'/><path d='M8 9h8M8 13h8' stroke='currentColor' stroke-width='2' stroke-linecap='round'/></svg></span>
+          <h3>Mesa de partes electrónica de ANC-PJ</h3>
+          <p>Canal para presentar documentos judiciales ante la Autoridad Nacional de Control del Poder Judicial.</p>
+        </a>
+      </div>
+      <div class="panel">
+        <span class="kicker">Indicadores visuales</span>
+        <h2 class="section-title">Métricas de servicios</h2>
+        <p class="muted">Uso de servicios y nivel de atención digital.</p>
+        <div class="grid-4" style="margin-top:18px;">
+          <div class="metric-card"><div class="metric-value">24/7</div><div class="metric-label">Disponibilidad del portal</div></div>
+          <div class="metric-card"><div class="metric-value">100%</div><div class="metric-label">Adaptable a móvil</div></div>
+          <div class="metric-card"><div class="metric-value">2</div><div class="metric-label">Páginas de ejemplo</div></div>
+          <div class="metric-card"><div class="metric-value">3</div><div class="metric-label">Capas CSS separadas</div></div>
+        </div>
       </div>
     </div>
+  </section>
+</main>
+
+    <div id="footer-partial" class="partial-root"></div>
   </div>
-</div>
-
-
-
-  <div id="site-header"></div>
-
-  <main class="main-content">
-
-
-    <section id="servicios-digitales" class="section-block">
-      <div class="container">
-        <div align="center" class="section-header">
-
-
-         
-          <h2 class="section-title">Servicios en línea</h2>
-          <p class="section-description">
-            Bienvenidos al sistema de SERVICIOS ELECTRÓNICOS EN LÍNEA mediante la cual usted podrá realizar diversos procedimientos judiciales en tiempo real, así reducir el tiempo y mejorar la seguridad en todo el proceso
-          </p>
-        </div>
-
-        <div class="row g-4">        
-         
-          <div align="center" id="consulta" class="col-md-6 col-xl-4">
-            <article class="service-card">
-              <div ><img src="assets/img/logo-menu-sinoe.png" class="img-fluid mx-auto d-block"></div>
-              <h4>Casilla electrónica</h4>
-              <p>Este es un canal para que los abogados, fiscales, procuradores y otros usuarios presenten reciban resoluciones y comunicaciones judiciales en una casilla electrónica.</p>
-           
-            </article>
-          </div>
-
-          <div align="center" id="mesa-partes" class="col-md-6 col-xl-4">
-            <article class="service-card">
-              <div ><a href="mesa.html"><img src="assets/img/logo-menu-mpe.png" class="img-fluid mx-auto d-block"></a></div>
-              <h4><a href="mesa.html" class="text-dark text-decoration-none">Mesa de partes electrónica</a></h4>
-              <p>Este es un canal para ingresar demandas y escritos de forma virtual, incluso con disponibilidad permanente en varios servicios y especialidades  sin ir físicamente a la sede.</p>
-            
-            </article>
-          </div>
-          <div align="center" class="col-md-6 col-xl-4">
-            <article class="service-card">
-              <div ><img src="assets/img/logo-menu-mpe-anc.png" class="img-fluid mx-auto d-block"></div>
-              <h4>Mesa de partes electrónica de  ANC-PJ</h4>
-              <p>Este es el canal para presentar documentos judiciales a la Autoridad Nacional de Control del Poder Judicial, sin ir físicamente a la sede.</p>
-             
-            </article>
-          </div>
-         
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <div class="container">
-        <div class="stats-wrap">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-4">
-              <p class="card-kicker mb-2">Indicadores visuales</p>
-              <h2 class="stats-title mb-2">Bloque listo para métricas institucionales</h2>
-              <p class="section-description mb-0">
-                Este espacio puede mostrar indicadores del portal, uso de servicios y nivel de atención digital.
-              </p>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-              <article class="stats-card text-center">
-                <div class="stat-icon mx-auto"><i class="bi bi-laptop"></i></div>
-                <div class="stats-number">24/7</div>
-                <p class="mb-0">Disponibilidad del portal</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-              <article class="stats-card text-center">
-                <div class="stat-icon mx-auto"><i class="bi bi-phone"></i></div>
-                <div class="stats-number">100%</div>
-                <p class="mb-0">Adaptable a móvil</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-              <article class="stats-card text-center">
-                <div class="stat-icon mx-auto"><i class="bi bi-window-stack"></i></div>
-                <div class="stats-number">2</div>
-                <p class="mb-0">Páginas de ejemplo</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-              <article class="stats-card text-center">
-                <div class="stat-icon mx-auto"><i class="bi bi-diagram-3"></i></div>
-                <div class="stats-number">3</div>
-                <p class="mb-0">Capas CSS separadas</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <div id="site-footer"></div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/includes.js"></script>
-<script>
-
-document.addEventListener("DOMContentLoaded", function() {
- 
-var miModal = new bootstrap.Modal(document.getElementById('modalComunicado'));
-miModal.show();
-
-
-});
-</script>
-
+  <script src="assets/app.js"></script>
 </body>
 </html>

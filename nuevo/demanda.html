@@ -4,136 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Servicio en línea</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/body.css" />
-  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-
-
-
-  <div id="site-header"></div>
-
-  <main class="main-content">
-
-
-    <section id="servicios-digitales" class="section-block">
-      <div class="container">
-        <div align="center" class="section-header">
-
-
-         
-          <h3 class="section-title text-secondary">Servicios en línea</h3>
-<br><br><br>
-        </div>
-
-        <div class="row">        
-         
-          <div id="consulta" class="col-md-6">
-          
-                          
-                <img src="assets/img/ciudadanos.png" class="img-fluid mx-auto d-block" style="opacity: 0.5;">
-           
-          
+  <div class="site-shell">
+    <div id="header-partial" class="partial-root"></div>
+    
+<main class="page-main">
+  <section class="page-banner">
+    <div class="section-wrap">
+      <div class="breadcrumbs">Inicio / Servicios en línea / Presentaciones</div>
+      <h1 class="page-heading">Servicios en línea</h1>
+      <p class="page-lead">Selecciona el tipo de documento que deseas presentar y continúa con el flujo correspondiente del expediente.</p>
+    </div>
+  </section>
+  <section class="page-section">
+    <div class="section-wrap content-grid">
+      <div class="panel">
+        <span class="kicker">¿Qué desea presentar?</span>
+        <p class="muted">Presenta tus documentos en línea de manera ágil y segura, vinculados con el Expediente Judicial Electrónico - EJE.</p>
+        <div class="form-grid" style="margin-top:18px;">
+          <div class="field">
+            <label for="tipo-documento">Tipo de documento</label>
+            <select id="tipo-documento">
+              <option>Escrito</option>
+              <option>Escrito Suprema</option>
+              <option>Demanda y Otros</option>
+              <option>Denuncias</option>
+              <option>Requerimientos NCPP</option>
+              <option>Denuncias Paz Letrado</option>
+              <option>Denuncias de Violencia Contra la Mujer y Grupo Familiar</option>
+            </select>
           </div>
+        </div>
+        <div class="inline-actions">
+          <a class="btn" href="mesaparte.html">Continuar</a>
+          <a class="btn-outline" href="mesa.html">Volver</a>
+        </div>
+      </div>
+      <aside class="side-stack">
+        <div class="panel">
+          <span class="kicker">Indicadores visuales</span>
+          <h2 class="section-title">Bloque listo para métricas institucionales</h2>
+          <p class="muted">Este espacio puede mostrar indicadores del portal, uso de servicios y nivel de atención digital.</p>
+          <div class="grid-2" style="margin-top:18px;">
+            <div class="metric-card"><div class="metric-value">24/7</div><div class="metric-label">Disponibilidad del portal</div></div>
+            <div class="metric-card"><div class="metric-value">100%</div><div class="metric-label">Adaptable a móvil</div></div>
+            <div class="metric-card"><div class="metric-value">2</div><div class="metric-label">Páginas de ejemplo</div></div>
+            <div class="metric-card"><div class="metric-value">3</div><div class="metric-label">Capas CSS separadas</div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
 
-
-
-  <div class="col-md-6">
-    <h3>¿Qué desea presentar?</h3>
-    <p>Presenta tus documentos en línea de manera ágil y segura, vinculados con el Expediente Judicial Electrónico - EJE.</p>
-  <div class="col-md-10">
-    <label for="tipoDocumento" class="form-label fw-semibold">Tipo de documento</label>
-    <select id="tipoDocumento" class="form-select" size="7" onchange="redirigirSegunOpcion()">
-      <option value="Escrito">Escrito</option>
-      <option value="Escrito Suprema">Escrito Suprema</option>
-      <option value="Demanda y Otros">Demanda y Otros</option>
-      <option value="Denuncias">Denuncias</option>
-      <option value="Requerimientos NCPP">Requerimientos NCPP</option>
-      <option value="Denuncias Paz Letrado">Denuncias Paz Letrado</option>
-      <option value="Denuncias de Violencia Contra la Mujer y Grupo Familiar">
-        Denuncias de Violencia Contra la Mujer y Grupo Familiar
-      </option>
-    </select>
+    <div id="footer-partial" class="partial-root"></div>
   </div>
-</div>
-
-
-       
-
-         
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <div class="container">
-        <div class="stats-wrap">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-4">
-              <p class="card-kicker mb-2">Indicadores visuales</p>
-              <h2 class="stats-title mb-2">Bloque listo para métricas institucionales</h2>
-              <p class="section-description mb-0">
-                Este espacio puede mostrar indicadores del portal, uso de servicios y nivel de atención digital.
-              </p>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-              <article class="stats-card text-center">
-                <div class="stat-icon mx-auto"><i class="bi bi-laptop"></i></div>
-                <div class="stats-number">24/7</div>
-                <p class="mb-0">Disponibilidad del portal</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-              <article class="stats-card text-center">
-                <div class="stat-icon mx-auto"><i class="bi bi-phone"></i></div>
-                <div class="stats-number">100%</div>
-                <p class="mb-0">Adaptable a móvil</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-              <article class="stats-card text-center">
-                <div class="stat-icon mx-auto"><i class="bi bi-window-stack"></i></div>
-                <div class="stats-number">2</div>
-                <p class="mb-0">Páginas de ejemplo</p>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-              <article class="stats-card text-center">
-                <div class="stat-icon mx-auto"><i class="bi bi-diagram-3"></i></div>
-                <div class="stats-number">3</div>
-                <p class="mb-0">Capas CSS separadas</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <div id="site-footer"></div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/includes1.js"></script>
-<script>
-  function redirigirSegunOpcion() {
-    const select = document.getElementById("tipoDocumento");
-    if (select.value === "Demanda y Otros") {
-      window.location.href = "mesaparte.html";
-    }
-  }
-
-
-</script>
-
+  <script src="assets/app.js"></script>
 </body>
 </html>
